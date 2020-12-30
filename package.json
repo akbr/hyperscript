@@ -4,8 +4,16 @@
   "homepage": "https://github.com/akbr/hyperscript",
   "repository": {
     "type": "git",
-    "url": "git://github.com/akbr/hyperscript"
+    "url": "git://github.com/akbr/hyperscript.git"
   },
   "author": "'Dominic Tarr' <dominic.tarr@gmail.com> (http://dominictarr.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "A simple fork of HyperScript that removes old polyfills, server rendering, and allows for camelCased style objects (except when using `!important`).",
+  "bugs": {
+    "url": "https://github.com/akbr/hyperscript/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
