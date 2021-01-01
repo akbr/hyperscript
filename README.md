@@ -1,6 +1,12 @@
 # HyperScript
 
-A simple fork of HyperScript that removes old polyfills, server rendering, and allows for camelCased style objects (except when using `!important`).
+A fork of HyperScript. Changes enumerated below.
+
+CHANGELOG:
+
+v0.0.2: `on*` events now addedd directly, instead of via `addEventHandler`. (plays nicer with DOM diffing)
+
+v0.0.1: Removed old polyfills, server rendering, and applied styles differently to allow for camelCased style objects (except when using `!important`).
 
 ## Example
 
@@ -64,7 +70,7 @@ for details.
 
 ### events
 
-If an attribute is a function, then it will be registered as an event listener.
+If an attribute is a function, then it will be added directly to the node as an event listener (e.g., `node.onclick = fn`).
 
 ```js
 var h = require("hyperscript");
@@ -83,7 +89,7 @@ h(
 
 ### styles
 
-If an attribute has a style property, then that will be handled specially.
+If an attribute has a style property, then that will be handled by directly changing the node's `.style` property (e.g., `node.style.backgroundColor = "blue"`).
 
 ```js
 var h = require("hyperscript");
